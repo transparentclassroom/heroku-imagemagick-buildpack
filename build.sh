@@ -2,4 +2,6 @@
 set -e
 docker build --no-cache --pull -t heroku-imagemagick container
 mkdir -p build
-docker run --rm -t -v $PWD/build:/data heroku-imagemagick sh -c 'cp -f /usr/src/imagemagick/build/*.tar.bz2 /data/'
+docker run --name heroku-imagemagick heroku-imagemagick sh
+docker cp heroku-imagemagick:/usr/src/imagemagick/build/imagemagick.tar.bz2 $(pwd)/build/
+docker stop heroku-imagemagick
