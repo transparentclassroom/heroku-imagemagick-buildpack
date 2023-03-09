@@ -9,7 +9,7 @@ This one works was built for [**Heroku stack 20**](https://devcenter.heroku.com/
 
 The tar file in the [/build folder](./build) currently contains:
 
-Version: ImageMagick 7.1.0-53
+Version: ImageMagick 7.1.0-62
 
 You will need to build a new binary if you want to use a newer or different version. To build a new binary see [How to Build a New Binary](#how-to-build-a-new-binary)
 
@@ -37,7 +37,7 @@ heroku builds:cache:purge -a HEROKU_APP_NAME
 # How to Build a New Binary (if you want to make somes changes)
 
 The binary in this repo was built in a heroku:20 docker image running in a local dev environment.
-However, there is a script called [**build.sh**](./build.sh) made to build a tar file through docker easily, it will be copied to the `build` directory. Then you should commit this changes to your git, and adjust the buildpack url previously mentionned just above.
+However, there is a script called [**build.sh**](./build.sh) made to build a tar file through docker easily, it will be copied to the `build` directory. Then you should commit this changes to your git, and adjust the buildpack url mentioned above.
 
 ## Prerequisites
 
@@ -46,7 +46,7 @@ However, there is a script called [**build.sh**](./build.sh) made to build a tar
 ## Credits
 
 - https://medium.com/@eplt/5-minutes-to-install-imagemagick-with-heic-support-on-ubuntu-18-04-digitalocean-fe2d09dcef1
-- https://github.com/brandoncc/heroku-buildpack-vips
+- https://github.**com**/brandoncc/heroku-buildpack-vips
 - https://github.com/steeple-dev/heroku-buildpack-imagemagick
 - https://github.com/retailzipline/heroku-buildpack-imagemagick-heif
 
